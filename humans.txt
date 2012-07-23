@@ -2,7 +2,8 @@
 /* humanstxt.org */
 
 /* TEAM */
-Company Name: Mark McDonnell, Bradley Few, Ashley Banks
+Company Name: Storm Creative
+Developers: A, B, C
 Site: http://www.stormcreative.co.uk/
 Twitter: http://twitter.com/stormcreative
 Location: 1727-1729 London Road, Leigh on Sea, Essex, SS2 9LR
