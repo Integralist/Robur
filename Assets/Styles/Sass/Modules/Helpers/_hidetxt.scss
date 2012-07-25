@@ -1,0 +1,19 @@
+/* =============================================================================
+   Image Replacement
+   Was originally using @zeldman's variation but turns out there was a bug...
+   http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/#comment-63147
+   ...so now, instead we use @necolas' version
+   
+   Notes:
+   The element needs to be a block level element (so display:block or display:inline-block)
+   This is because you need to apply a width and height for the image replacement technique to work
+   
+   Example:
+   http://jsfiddle.net/pf93S/10/
+   ========================================================================== */
+
+.hidetxt {
+	font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+}

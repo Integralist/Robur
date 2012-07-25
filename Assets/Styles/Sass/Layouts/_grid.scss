@@ -1,0 +1,89 @@
+/* =============================================================================
+   Grid
+   Sass port of Twitter Bootstrap's Grid functionality
+   https://github.com/jlong/sass-twitter-bootstrap
+   
+   Copyright 2012 Twitter, Inc
+   Licensed under the Apache License v2.0
+   http://www.apache.org/licenses/LICENSE-2.0
+   
+   Designed and built with all the love in the world @twitter by @mdo and @fat.
+   ========================================================================== */
+ 
+// GRID
+// -------------------------
+
+// Settings
+// -------------------------
+$gridColumns: 12 !default;
+$gridColumnWidth: 60px !default;
+$gridGutterWidth: 0px !default;
+$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
+
+// Fluid grid
+// -------------------------
+//$fluidGridColumnWidth: 6.382978723% !default;
+//$fluidGridGutterWidth: 2.127659574% !default;
+
+// I believe I managed to calculate the following column width value from the gridpak.com interface
+$fluidGridColumnWidth: 8.33333333333% !default; //7.14285714286
+$fluidGridGutterWidth: 0% !default;
+
+@mixin clearfix {
+    *zoom: 1;
+    
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    
+    &:after {
+        clear: both;
+    }
+}
+
+// Block level inputs
+@mixin input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 28px; // Make inputs at least the height of their button counterpart
+    
+    // I REMOVED THE FOLLOWING LINE AS OUR 'BASE' STYLESHEET SETS ALL ELEMENTS TO HAVE 'border-box' ALREADY
+    //@include box-sizing(border-box); // Makes inputs behave like true block-level elements
+}
+
+@mixin span($columns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
+    width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
+    *width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%);
+}
+
+@mixin grid($fluidGridColumnWidth, $fluidGridGutterWidth) {
+    .row {
+        width: 100%;
+    
+        @include clearfix();
+        
+        [class*="span"] {
+            @include input-block-level();
+            float: left;
+            margin-left: $fluidGridGutterWidth;
+            *margin-left: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
+        }
+        
+        [class*="span"]:first-child {
+            margin-left: 0;
+        }
+
+        // generate .spanX
+        $i: $gridColumns;
+        @while $i > 0 {
+            .span#{$i} {
+                @include span($i, $fluidGridColumnWidth, $fluidGridGutterWidth);
+            }
+            $i: $i - 1;
+        }
+    }
+}
+
+@include grid($fluidGridColumnWidth, $fluidGridGutterWidth);
