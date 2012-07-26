@@ -9,7 +9,7 @@
         <title></title>
         <?php require 'Assets/Includes/google-analytics.php'; ?>
         <?php require 'Assets/Includes/head.php'; ?>
-        <link rel="stylesheet" href="Assets/Styles/mobile.css"  media="only screen and (min-width: 320px)">
+        <link rel="stylesheet" href="Assets/Styles/mobile.css"  media="only screen and (min-width: 320px) and (max-width: 480px)">
         <link rel="stylesheet" href="Assets/Styles/tablet.css"  media="only screen and (min-width: 600px) and (max-width: 959px)">
         <link rel="stylesheet" href="Assets/Styles/desktop.css" media="only screen and (min-width: 960px)">
         <!--[if (lt IE 9) & (!IEMobile)]>
