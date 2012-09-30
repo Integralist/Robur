@@ -1,0 +1,13 @@
+@mixin border-image ($img, $colour: #7F7F7F, $borderwidth: 4px 6px, $amount: 4 6 4 6, $type1: stretch, $type2: stretch) {
+    border: 1px solid $colour;
+    border-width: $borderwidth;
+    
+    -webkit-border-image: url($img) $amount $type1 $type2;
+       -moz-border-image: url($img) $amount $type1 $type2;
+         -o-border-image: url($img) $amount $type1 $type2;
+            border-image: url($img) $amount $type1 $type2;
+    
+    .no-borderimage & {
+        border-width: 1px;
+    }
+}

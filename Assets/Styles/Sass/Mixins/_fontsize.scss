@@ -1,0 +1,23 @@
+/* =============================================================================
+   Inserts the font size as an rem unit
+   Falls back to pixel unit for browsers that don't support REM (IE < 9)
+
+   Useful for responsive designs.
+   
+   Explanation:
+   The premise is that you divide the 'target' font size by the font size of the root element (<html>).
+   You then specify the font size in 'rems'.
+   e.g. 11px / 16px = .6875rem;
+
+   Unlike using the em unit (which is affected by its container) the rem unit is easier because 
+   the root element font size always stays the same.
+   
+   Example usage:
+   @include font-size(11);
+   ========================================================================== */
+
+@mixin font-size ($font-size) {
+    font-size: $font-size +px;
+    font-size: $font-size / $base-font-size +rem;
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+}

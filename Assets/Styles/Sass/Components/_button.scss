@@ -4,6 +4,7 @@
    ========================================================================== */
    
 .btn {
+    @include font-size(12);
     $btn-background: #3079ed;
     $btn-border: darken($btn-background, 20%);
     $btn-hover: darken($btn-background, 40%);
@@ -27,7 +28,6 @@
     color: $btn-color;
     cursor: default;
     display: inline-block;
-    font-size: .75em; // 12px / 16px
     font-weight: bold;
     margin: 0px 12px 0px 0px;
     padding: 7px 12px;

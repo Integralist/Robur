@@ -9,9 +9,9 @@
    e.g. 95px / 16 = 5.9375em;
    
    Example usage:
-   padding-right: calc-em(95);
+   padding-right: calc-ems(95);
    ========================================================================== */
 
-@function calc-em ($target) {
+@function calc-ems ($target) {
     @return ($target / $base-font-size) * 1em; // Had to multiply by one to stop a space between the sum and type
 }

@@ -2,20 +2,20 @@
    Configurable variables that will change depending on project
    ========================================================================== */
 
-$base-font-size: 16px;
-$base-font-size-nounit: 16;
+$base-font-size:    16;
+$base-line-height:  24;
 $prefixes: -webkit, -moz, -ms, -o;
 
-$brand-color: #CC0;  // GENERAL BRAND COLOUR
-$action-color: #67a54b; // BUTTONS
-$module-color: #f2f2f2; // COMPONENTS
-$alert-color: #b22727;  // WARNINGS & ALERTS
+$primary: #CC0;
+$secondary: #67a54b;
+$tertiary: #f2f2f2;
+$alert: #b22727;
 
-// Now create different 'tones' for each brand colour
-$brand-color-light: lighten($brand-color, 10%);
-$brand-color-lighter: lighten($brand-color, 20%);
-$brand-color-dark: darken($brand-color, 10%);
-$brand-color-darker: darken($brand-color, 20%);
+// Now create different 'tones' for each primary colour
+$primary-light: lighten($primary, 10%);
+$primary-lighter: lighten($primary, 20%);
+$primary-dark: darken($primary, 10%);
+$primary-darker: darken($primary, 20%);
 
 $site-max-width: 60em; // 960px / 16px (this being the baseline font size)
 
