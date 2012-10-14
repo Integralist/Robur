@@ -9,11 +9,14 @@
         <title></title>
         <?php require 'Assets/Includes/google-analytics.php'; ?>
         <?php require 'Assets/Includes/head.php'; ?>
-        <link rel="stylesheet" href="Assets/Styles/320px-480px_home.css"  media="only screen and (min-width: 20em) and (max-width: 30em)">
-        <link rel="stylesheet" href="Assets/Styles/600px-959px_home.css"  media="only screen and (min-width: 37.5em) and (max-width: 59.9375em)">
-        <link rel="stylesheet" href="Assets/Styles/960px_home.css" media="only screen and (min-width: 60em)">
+        <link rel="stylesheet" href="Assets/Styles/home.css"     media="all">
+        <link rel="stylesheet" href="Assets/Styles/home-600.css" media="only screen and (min-width: 37.5em)">
+        <link rel="stylesheet" href="Assets/Styles/home-768.css" media="only screen and (min-width: 40em)">
+        <link rel="stylesheet" href="Assets/Styles/home-960.css" media="only screen and (min-width: 60em)">
         <!--[if (lt IE 9) & (!IEMobile)]>
-        <link rel="stylesheet" href="/Assets/Styles/960px_home.css">
+        <link rel="stylesheet" href="Assets/Styles/home-600.css">
+        <link rel="stylesheet" href="Assets/Styles/home-768.css">
+        <link rel="stylesheet" href="Assets/Styles/home-960.css">
         <![endif]-->
     </head>
     <body>

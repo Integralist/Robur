@@ -1,0 +1,259 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/JSHint/JSHint.sublime-build",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"set css",
+				"Set Syntax: CSS"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"fe",
+				"Fetch: Manage remote files"
+			],
+			[
+				"fetc",
+				"Fetch: Manage remote files"
+			],
+			[
+				"set js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"set syntax: css",
+				"Set Syntax: CSS"
+			],
+			[
+				"wrap",
+				"HTML: Wrap Selection With Tag"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 181.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Mixins/_flyout.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Mixins/_border.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/960px_home.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/320px-480px_home.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/600px-959px_home.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Plugins/_slimbox.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_vendor.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_shadow.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_radius.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_transform.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_transition.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_boxsizing.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_border-image.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_border.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Mixins/_fontsize.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Extensions/_list.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Components/_button.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Configurations/_variables.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Abstractions/_push.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Abstractions/_media.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Abstractions/_horizontal.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Abstractions/_hidetxt.scss",
+		"/Users/markmcdonnell/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/markmcdonnell/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Modules/Abstractions/_clearfix.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Layouts/_grid.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Layouts/_container.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Functions/_fontsize-em.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Functions/_calc-percentage.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Functions/_calcems.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Functions/_fontsize.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Functions/_calcpercentage.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Base/_theme.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Base/_placeholder.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Base/_normalize.scss",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/Sass/Base/_additions.scss",
+		"/Users/markmcdonnell/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/Users/markmcdonnell/Library/Application Support/Sublime Text 2/Packages/User/jscom.sublime-snippet",
+		"/Users/markmcdonnell/Library/Application Support/Sublime Text 2/Packages/User/htmlbasic.sublime-snippet",
+		"/Users/markmcdonnell/Library/Application Support/Sublime Text 2/Packages/User/html",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Scripts/Utils/Patterns/when.js",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Styles/IE_notification.css",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/Assets/Scripts/App/main.js",
+		"/Users/markmcdonnell/Dropbox/Sites/Template/index.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Modules/",
+			"tab",
+			"font"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.csslint_result_view":
+	{
+		"height": 326.0
+	},
+	"output.exec":
+	{
+		"height": 441.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"var",
+				"Assets/Styles/Sass/Configurations/_variables.scss"
+			],
+			[
+				"font",
+				"Assets/Styles/Sass/Functions/_fontsize.scss"
+			],
+			[
+				"_var",
+				"Assets/Styles/Sass/Configurations/_variables.scss"
+			],
+			[
+				".js",
+				"Assets/Scripts/Utils/Patterns/when.js"
+			],
+			[
+				"css",
+				"Assets/Styles/IE_notification.css"
+			],
+			[
+				"main.js",
+				"Assets/Scripts/App/main.js"
+			],
+			[
+				"inde",
+				"index.php"
+			],
+			[
+				"600",
+				"Assets/Styles/Sass/600px-959px_home.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/markmcdonnell/Dropbox/Sites/Test Script Loading/Test Script Loading.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 263.0,
+	"status_bar_visible": true
+}
