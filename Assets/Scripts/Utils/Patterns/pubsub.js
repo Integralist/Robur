@@ -43,7 +43,7 @@ define(function(){
     pubsub.subscribe =  function (topic, fn) {
         /*
            If the specified topic doesn't exist on the object 
-           then add it as a new property and set it to an empty variable
+           then add it as a new property and set it to an empty Array
          */
         if (!topics[topic]) {
             topics[topic] = [];
