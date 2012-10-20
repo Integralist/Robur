@@ -22,7 +22,7 @@
                         pubsub.unsubscribe(testSubscription);
                     }, 0);
 
-                    // This event wont be published as the previous line unsubscribed from it
+                    // This event will be published but 'testSubscription' will no longer receive a notification of it
                     pubsub.publish('example1', 'hello again!');
  */
 define(function(){
