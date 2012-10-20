@@ -1,13 +1,27 @@
 define(function(){
 
-	var truncate = function(str, length, suffix) {
-		length = length || 30;
-		suffix = (typeof suffix == "undefined") ? '...' : suffix;
-		
-		// if the string isn't longer than the specified cut-off length then just return the original string
-		return (str.length > length) ? /* next we borrow the String object's "slice()" method using the "call()" method */ String.prototype.slice.call(str, 0, length - suffix.length) + suffix : str;
-	}
-	
-	return truncate;
+    var truncate = function(str, length, suffix) {
+        var length = length || 30;
+        var suffix = (typeof suffix == "undefined") ? '...' : suffix;
+        
+        // strip off HTML entities such as &nbsp; but use a negative lookahead to prevent &hellip; from being stripped
+        var strip_entities = str.replace(/&(?!hellip)[a-z]+;/gim, '');
+
+        // strip off dodgy line breaks and carriage returns and extra potential spaces/tabs
+        var strip_breaks = strip_entities.replace(/\r+\s+\t+\r+/gim, '');
+
+        // if the string isn't longer than the specified cut-off length then just return the original string
+        var add_suffix = (strip_breaks.length > length) 
+            ? /* next we borrow the String object's "slice()" method using the "call()" method */ String.prototype.slice.call(strip_breaks, 0, length - suffix.length) + suffix 
+            : strip_breaks;
+
+        var strip_endspace = add_suffix.replace(/\s(\.\.\.)$/gim, function (match, cg1) {
+            return cg1;
+        });
+
+        return strip_endspace;
+    }
+    
+    return truncate;
 
 });
