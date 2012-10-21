@@ -109,8 +109,8 @@ define(function(){
             var subscribers = topics[topic],
 
             // Cache the length of subscribers for the topic 
-            // If the topic has no subscribers then set the length to zero
-            len = subscribers ? subscribers.length : 0;
+            // Note: If the topic has no subscribers then the length will be equal to zero and the following loop will not run
+            len = topics[topic].length;
 
             // Loop through each subscriber...
             while (len--) {
