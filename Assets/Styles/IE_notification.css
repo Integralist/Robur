@@ -10,7 +10,7 @@ body, html {
 	overflow: hidden; 
 }
 
-#ie-container {
+.ie-container {
 	background-color: #000; 
 	filter: alpha(opacity=70);
 	height: 100%; 
@@ -21,7 +21,7 @@ body, html {
 	z-index: 1000;
 }
 
-#ie-message {
+.ie-message {
 	height: 144px;
 	left: 50%;
 	margin: 0 0 0 -272px;
@@ -31,16 +31,16 @@ body, html {
 	z-index: 1000;
 }
 
-#ie-message span {
+.ie-message span {
 	font-size: 120%;
-	left: 0px;
+	left: 0;
 	position: absolute;
 	text-align: center;
 	top: 63px;
 	width: 545px;
 }
 
-#ie-message a {
+.ie-message a {
 	color: #fff;
 	text-decoration: none;
 }
