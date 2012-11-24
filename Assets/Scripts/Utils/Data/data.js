@@ -23,8 +23,8 @@ define(function(){
 
     var warehouse = {};
     var count = 1;
-
-    return {
+    
+    var Data = {
         /*
             Set some data onto the specified Element via DOM property rather than via DOM attributes.
 
@@ -39,7 +39,10 @@ define(function(){
             }
 
             // Store the data in our Warehouse object and assign it to a key whose value is the unique DOM property value
-            warehouse[dom.__data] = data;
+            warehouse[dom.__data] = {
+                element: dom,
+                data: data
+            };
         },
 
         /*
@@ -49,7 +52,7 @@ define(function(){
             @return warehouse[dom.__data] {Multiple} the data stored for the element with a DOM property of '__data'
          */
         get: function (dom) {
-            return warehouse[dom.__data];
+            return warehouse[dom.__data].data;
         },
 
         /*
@@ -58,6 +61,18 @@ define(function(){
             @return undefined {undefined} no explicit return value
          */
         reset: function(){
+            /*
+                We have created a circular reference by having a JavaScript object reference a DOM object, 
+                and then having that same DOM object reference a JavaScript object.
+                So we clean-up after ourselves by null'ing the references when we reset the warehouse object.
+             */
+
+            // Loop through the properties of the 'warehouse' object
+            for (prop in warehouse) {
+                // Delete the DOM property
+                delete warehouse[prop].element.__data;
+            }
+
             count = 1;
             warehouse = {};
         },
@@ -71,5 +86,12 @@ define(function(){
             return warehouse;
         }
     };
+
+    // This is for the benefit of Internet Explorer's garbage collection
+    window.onbeforeunload = function(){
+        Data.reset();
+    };
+
+    return Data;
 
 });
