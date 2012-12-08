@@ -24,7 +24,7 @@ define(function(){
                 break;
             }
         } 
-        // Other brower prefixes to be checked
+        // Other browser prefixes to be checked
         else {
             // If not undefined then we've found a successful match
             if (doc[prefixes[limit] + 'AnimationName'] !== undefined) {
