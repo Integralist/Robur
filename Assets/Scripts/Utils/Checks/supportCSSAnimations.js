@@ -5,6 +5,11 @@ define(function(){
         MozAnimationName => Mozilla Firefox
         OAnimationName => Opera
         animationName => compliant browsers (inc. IE10)
+
+        WebkitTransition (webkitTransitionEnd)
+        MozTransition (transitionend)
+        OTransition (oTransitionEnd, otransitionend)
+        transition (transitionend)
      */
     var supported = false;
     var prefixes = ['webkit', 'Moz', 'O', ''];
