@@ -1,1 +1,546 @@
-/* normalize.css v2.0.1 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{padding:0}hr{background-color:#ccc;border:0;color:#ccc;height:1px}img{display:block}table{table-layout:fixed}body{margin:1em}.container{display:block;margin-left:auto;margin-right:auto;max-width:60em;position:relative}.ie8 .container{max-width:none;width:60em}
+/* =============================================================================
+   Configurable variables that will change depending on project
+   ========================================================================== */
+/* =============================================================================
+   Returns the relevant width of an element as a percentage.
+   Useful for responsive designs.
+   
+   Explanation:
+   The premise is that you divide the 'target' width by the width of its 'container' (i.e. 'context').
+   You then move the decimal point over two places.
+   e.g. 140/960 = .145833333 which you want to use as 14.5833333%
+   
+   Example usage:
+   calc-percent(140, 960);
+   ========================================================================== */
+/* =============================================================================
+   Returns the relevant pixel amount in ems.
+   Useful for responsive designs and specifically locations where the 'calc-percent' can't be used (because container width is unknown)
+   http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/#baseline-expectations
+   
+   Explanation:
+   The premise is that you divide the 'target' amount (in pixels) by the standard font size of the browser (16px).
+   You then specify the return value to be 'ems'.
+   e.g. 95px / 16 = 5.9375em;
+   
+   Example usage:
+   padding-right: calc-ems(95);
+   ========================================================================== */
+/* =============================================================================
+   Returns the correct aspect ratio height value for the specified width of an element
+   
+   Explanation:
+   Pixels are used by default if no $unit argument is passed.
+   
+   Example usage: 
+   To get a 16:9 aspect ratio then use 9/16
+   If the width of the element is 197px then the height will be set to 56px
+   height: aspect(100, 9/16);
+   height: aspect(500, 9/16, '%');
+   height: aspect(500, 9/16, '');
+   ========================================================================== */
+/* =============================================================================
+   Inserts the font size as an rem unit
+   Falls back to pixel unit for browsers that don't support REM (IE < 9)
+
+   Useful for responsive designs.
+   
+   Explanation:
+   The premise is that you divide the 'target' font size by the font size of the root element (<html>).
+   You then specify the font size in 'rems'.
+   e.g. 11px / 16px = .6875rem;
+
+   Unlike using the em unit (which is affected by its container) the rem unit is easier because 
+   the root element font size always stays the same.
+   
+   Example usage:
+   @include font-size(11);
+   ========================================================================== */
+/* =============================================================================
+   Create vendor-prefixed CSS in one go
+
+   Example usage:
+   @include vendor(box-sizing, border-box);
+   ========================================================================== */
+/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\0000321}}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\0000331}}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\0000340}}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\0000349}}
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\0000363}}
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Removes default margin.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\0000373}}
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\0000385}}
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\0000394}}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003107}}
+h1 {
+  font-size: 2em;
+}
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003115}}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003124}}
+b,
+strong {
+  font-weight: bold;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003132}}
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003140}}
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003153}}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003162}}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * Sets consistent quote types.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003172}}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003180}}
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003189}}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003196}}
+sup {
+  top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003200}}
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003212}}
+img {
+  border: 0;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003220}}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003232}}
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003244}}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003255}}
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003269}}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003281}}
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003296}}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003306}}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003316}}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003327}}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003340}}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003349}}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003359}}
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_normalize\.scss}line{font-family:\00003372}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =============================================================================
+   Additions
+   The Base settings are mainly from @necolas's Normalize.css style sheet
+   But I've enhanced & amended some of the settings to suit my own requirements
+   ========================================================================== */
+/*
+ * http://paulirish.com/2012/box-sizing-border-box-ftw/
+ * Apply a natural box layout model to all elements
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_additions\.scss}line{font-family:\0000311}}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_additions\.scss}line{font-family:\0000317}}
+body {
+  padding: 0;
+}
+
+/* 
+ * Addresses consistent display across browsers
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_additions\.scss}line{font-family:\0000324}}
+hr {
+  background-color: #ccc;
+  border: 0;
+  color: #ccc;
+  height: 1px;
+}
+
+/* 
+ * Avoids 3px bottom margin
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_additions\.scss}line{font-family:\0000334}}
+img {
+  display: block;
+}
+
+/* 
+ * Make the table render more quickly by setting its layout to be fixed.
+ * e.g. if the first row of cells has a width set then the browser now wont bother re-calculating the widths for every other row
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_additions\.scss}line{font-family:\0000342}}
+table {
+  table-layout: fixed;
+}
+
+/* =============================================================================
+   Theme
+   These are base level rules, but which are specific to the current project
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Base\/_theme\.scss}line{font-family:\000036}}
+body {
+  margin: 1em;
+}
+
+/* =============================================================================
+   Container Block
+   This is normally what we place the main website content within (as a wrapper)
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Layouts\/_container\.scss}line{font-family:\000036}}
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60em;
+  position: relative;
+}
+
+/* =============================================================================
+   BUG?
+   This might be a bug, or we've mis-understood the cause of the problem.
+   Seems box-sizing:border-box doesn't work in IE8 when using 'max-width' instead of 'width'.
+   To work around this we're setting a 'width' (and resetting 'max-width') for IE8.
+   The alternative was - for IE8 - to set 'max width' but minus off padding (but that's just ridiculous).
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/Layouts\/_container\.scss}line{font-family:\0000322}}
+.ie8 .container {
+  max-width: none;
+  width: 60em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/home\.scss}line{font-family:\0000333}}
+#test {
+  border: 1px solid blue;
+  height: 6.25em;
+  padding: 0.3125em;
+  width: 60em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/Documents\/Template\/Assets\/Styles\/Sass\/home\.scss}line{font-family:\0000339}}
+#test div {
+  border: inherit;
+  border-color: pink;
+  height: 56.25%;
+  width: 20.83333%;
+}

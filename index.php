@@ -22,6 +22,10 @@
     <body>
         <?php require 'Assets/Includes/internet-explorer.php'; ?>
         
+        <div id="test">
+            <div></div>
+        </div>
+        
         <script data-main="Assets/Scripts/App/main" src="Assets/Scripts/require.js"></script>
     </body>
 </html>
