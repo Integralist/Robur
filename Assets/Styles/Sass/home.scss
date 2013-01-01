@@ -3,6 +3,8 @@
 
 // Functions
 @import "Functions/calc-percentage";
+@import "Functions/calc-em";
+@import "Functions/calc-aspect-ratio";
 
 // Mixins
 @import "Mixins/fontsize";
@@ -26,3 +28,18 @@
 
 
 // Specific Styles: Base styles (up to 600px)
+
+// Following is a quick test of our aspect ratio function
+#test {
+    border: 1px solid blue;
+    height: calc-ems(100);
+    padding: calc-ems(5);
+    width: calc-ems(960);
+
+    div {
+        border: inherit;
+        border-color: pink;
+        height: aspect(100, 9/16, '%');
+        width: calc-percent(200, 960); // NOT completely accurate! In WebKit it returns a computed value of 197px rather than 200px
+    }
+}

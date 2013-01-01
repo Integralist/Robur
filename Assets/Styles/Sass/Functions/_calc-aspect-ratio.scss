@@ -1,0 +1,22 @@
+/* =============================================================================
+   Returns the correct aspect ratio height value for the specified width of an element
+   
+   Explanation:
+   Pixels are used by default if no $unit argument is passed.
+   
+   Example usage: 
+   To get a 16:9 aspect ratio then use 9/16
+   If the width of the element is 197px then the height will be set to 56px
+   height: aspect(100, 9/16);
+   height: aspect(500, 9/16, '%');
+   height: aspect(500, 9/16, '');
+   ========================================================================== */
+@function aspect($width, $ratio, $unit:px) {
+    @if ($unit == px) {
+        @return ($width * ($ratio) + px);
+    }@elseif ($unit == '%') {
+        @return ($width * ($ratio) * 1.00%);
+    }@else {
+        @return ($width * ($ratio) * 1em);
+    }
+}
